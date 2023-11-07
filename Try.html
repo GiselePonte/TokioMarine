@@ -1,0 +1,310 @@
+<html>
+    <head>
+        <title>Tokio Marine</title>
+        <meta charset="UTF-8"/>
+        <style>
+            span{
+                color:#a9daa2;
+            }
+            .fundo_cab {background-color:rgb(29, 133, 51);
+                        padding:130px;
+                        height:20px;}
+           
+             .texto_logo{color:rgb(233, 233, 231);
+            font-size: 39px;
+         }
+           
+            #container{
+                width:1000px;
+                margin: 0 auto;
+            }
+        
+            a:link, a:active, a:visited{
+                color:rgb(231, 228, 228);
+                text-decoration: none;
+                            }
+            a:hover{
+                color:rgb(238, 231, 231);
+            }
+            header{
+                padding:15px 0 ;
+                height: 55px;
+            }
+
+            nav ul{
+                list-style: none;
+                margin: 20px;
+                float:right;
+            }
+
+            nav ul li{
+                float:left;
+            }
+
+            nav ul li a:link{
+                display:block;
+                margin-right: 25px;
+                padding-bottom:3px;
+                text-transform:uppercase;
+            }
+
+            nav ul li a:hover{
+                border-bottom: 1px solid rgb(241, 235, 235);
+            }
+
+            #conteudo{
+                width:710px;
+                float:left;
+                background:rgb(29, 133, 51);
+                margin-bottom: 20px;
+                margin-left: 35px;
+            }
+
+            aside{
+                width: 450px;
+                float:right;
+                background:rgb(29, 133, 51);
+                margin-bottom: 20px;
+                margin-right: 37px;
+            }
+
+            section#consulta{
+                background:#ffffff;
+                padding:10px 27px 27px 27px;
+                margin-top: 10px;
+            }
+
+            h4{
+                color:#1c721c;
+                text-transform:uppercase;
+                padding-bottom: 3px;
+                margin-bottom: 0;
+            }
+
+            input{
+                width: 80px;
+                height: 20px;
+                background:#f5f1f1;
+                border:none;
+                font-size:1em;
+            }
+
+            input.campo{
+                border:1px solid #e0ebf0
+            }
+
+            input.botao{
+                background: #2f8f2f;
+                color:white;
+                width: 100%;
+                height: 40px;
+                font-size:1.2em;
+            }
+            fieldset{
+                border:none;
+
+            }
+
+            legend{
+                display:none;
+            }
+
+            section#galeria{
+                padding:0 27px 0 27px;
+            }
+            
+            section#galeria a{
+                display: block;
+                background: url(data:image/jpeg;base64,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) no-repeat;
+                border:1px solid rgb(236, 235, 235);
+                float:left;
+                padding:15px 15px 16px 15px;
+                margin:10px 0 0 20px;
+                
+            }
+
+            section#galeria img{
+                margin-left: 2px;
+                margin-top:3px;
+            }
+
+            h3{
+                color:#ecf5ec;
+                font-size:1.2em;
+                margin-bottom: 15px;
+                text-transform: uppercase;
+            }
+
+            article#video{
+                float:left;
+                width: 310px;
+                margin-left: 25px;
+            }
+
+            article#mapa{
+                float:left;
+                width: 310px;
+                margin-left: 37px;
+            }
+
+            article#racas{
+                float:left;
+                width: 310px;
+                margin:15px 0 0 25px;
+                
+            }
+            article#cuidados{
+                float:left;
+                width: 310px;
+                margin:15px 0 0 37px;
+                
+            }
+
+            footer{
+                clear:both;
+                padding:20px 0 30px 0;
+                text-align: center;
+                background: hsl(113, 48%, 33%);
+                margin-top: 20px;
+            }
+
+            footer>p a{
+                padding:2px; 
+            }
+
+        
+   
+
+        </style>
+    </head>
+    <body>
+        <p class="text-md-center"></p>
+        <div class="fundo_cab" id=container>
+            
+            <header>
+                <div id="logo">
+                 
+                    <h2><span class="texto_logo"><span>Tokio </span> Marine<span> </span></h2>
+                   
+                </div>
+                
+                    <nav>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Seguros</a></li>
+                            <li><a href="#">Cotações</a></li>
+                            <li><a href="#">PLanos </a></li>
+                            <li><a href="#">Atendentes</a></li>
+                            <li><a href="#">Contato</a></li>
+                        </ul>
+                    </nav>
+                
+            </header>
+        </div>
+
+        <div id="principal">
+            <div id="conteudo">
+                <section id="capa">
+                   <center><img src="https://seguroviagempro.com.br/wp-content/uploads/2023/06/tokio-marine-seguro-viagem-1.jpg" width="710" height="500" ></center>
+                </section>
+
+                <section id="postgem">
+                    <article id="video">
+                        <h3>O que é seguro? </h3>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/2iG9Oinye50?si=XkPFxiMbTCFjh42j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        
+                    </article>
+
+                    <article id="mapa">
+                        <h3>Encontre nossa seguradora</h3>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58528.32652216902!2d-46.719049778320304!3d-23.53176840000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce586a3079d86f%3A0x844ac9b57dbd4f2b!2sPorto%20Seguro%20Cia.%20de%20Seguros%20Gerais!5e0!3m2!1sen!2sbr!4v1699382992449!5m2!1sen!2sbr"
+                         width="310" height="180" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </article>
+
+                    <article id="racas">
+                        <h3>Seguros </h3>
+                        <ul>
+                            <li>
+                                <a href="#">Seguro residencial.</a>
+                            </li>
+                            <li>
+                                <a href="#">Seguro de vida.</a>
+                            </li>
+                            <li>
+                                <a href="#">Seguro de automovel.</a>
+                            </li>
+                            <li>
+                                <a href="#">Seguro de banco.</a>
+                            </li>
+                       
+                       
+                       
+                       
+                        </ul>
+                    </article>
+
+                    <article id="cuidados">
+                        <h3>Cuide da sua vida, contrate seguros</h3>
+                        <p> Uma das principais razões para se contratar um seguro é a garantia de uma proteção capaz de cobrir as despesas necessárias e
+                             imediatas em um evento adverso (sinistro). Assim, no caso de uma ausência repentina ou da perda de bens em um acidente, você
+                              e sua família estarão protegidos pela apólice do seguro.
+                            
+                        </p>
+                    </article>
+                </section>
+
+            </div>   
+           
+            <aside>
+                <section id="depoimento">
+                   <center> <img src="https://media.licdn.com/dms/image/D4D10AQHEFe7c2Z42QQ/image-shrink_800/0/1697568916192?e=1699948800&v=beta&t=SQQdXgjW241L4Cb5kBz7QQjAw5fl-tjAngXzCKOm5kw" width="" height="400"> </center>
+                    <center><p><i>"Eu e minha família amamos estar seguros com a Tokio Marine, confiamos de olhos fechados." Adelina</i></p></center>
+                </section>
+
+                <section id="consulta">
+                    <h4>Marque sua cotação</h4>
+                    <form>
+                        <fieldset>
+                            <legend>Selecione uma data</legend>
+                            <label for="data">data:</label>
+                            <input  class="campo" type="text" id="data" value="dd/mm/aa">
+                        </fieldset>
+                        <input class="botao" type="submit" value="Verificar">
+                    </form>
+                </section>
+
+                <section id="galeria">
+                    <h4>Tipos de Seguros</h4>
+                    <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwic64OP2LKCAxV3KdQBHWFqCKIYABAAGgJvYQ&ase=2&gclid=CjwKCAiA3aeqBhBzEiwAxFiOBsP_QfDwTjlYzEQDVGvb2hrTHh3Tk2NQTk83k0QBwyomFlnp2kZQbhoCuooQAvD_BwE&ohost=www.google.com&cid=CAESVuD2uxW2N0pl_YcmIl8iA6dItCsGNroiW2CO_jn8nwpSJBY8058nvtAu63rjm32HRgEJ9Epg8RlFKAghMsqQO6trwKxvXoKfs1jaMnBmI7k-mtYi-rwR&sig=AOD64_1SA7vqjK2TDt__CenRj3zQR5kM0w&q&nis=4&adurl&ved=2ahUKEwizj_yO2LKCAxVclGoFHbMVB_IQ0Qx6BAgIEAE">
+                        <img src="https://static.vecteezy.com/ti/vetor-gratis/p3/2318030-icone-seguro-casa-vetor.jpg" height="93" width="93" alt="gato1">
+                    </a>
+                    <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwi86L7a17KCAxVXK9QBHYGgAi0YABACGgJvYQ&ase=2&gclid=CjwKCAiA3aeqBhBzEiwAxFiOBjFBMkvOXDEsX7ImtzVJWd4KtzacZKdQ-Gc3m9tXxznQ7loBjv0Q7xoCXSwQAvD_BwE&ohost=www.google.com&cid=CAESVuD21QanAeTve1XYe1aLbWhbuswGQTegzYn-vnm9Oj2xgLOcV-mu368fHOE_T3V_SXNFhHlJVVLOzDVfnqgOU_VzhPWBB7-7VnoJ3t3JxYcu2GMunQJd&sig=AOD64_3hoPKQDbfboKeOeKOLVuHUcTtfqQ&q&nis=4&adurl&ved=2ahUKEwiXzrfa17KCAxWZkmoFHQqEB9MQ0Qx6BAgKEAE">
+                        <img src="data:image/png;base64,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" height="93" width="93" alt="gato2">
+                    </a>
+                    <a href="https://www.tokiomarine.com.br/seguros-automoveis/seguro-auto/">
+                        <img src="https://img.freepik.com/vetores-premium/maos-de-icone-de-vetor-de-seguro-de-carro-segurando-o-carro_566734-440.jpg?w=2000" height="93" width="93" alt="gato3">
+                    </a>
+                    <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwilkIS12LKCAxVV8eMHHcVSCsIYABAAGgJ5bQ&ase=2&gclid=CjwKCAiA3aeqBhBzEiwAxFiOBuHXIXLzLJBTiykXH0BqGBcCgq_S-13ihzeUfey5JkHK5er6efMaRRoC79wQAvD_BwE&ohost=www.google.com&cid=CAESVuD2CNU3am6V3M7jayxjACWgy2ozP-xwroDvnEFyq7j-qgH92Rqw5n_DPxeViVw4IN3XH05v6fQrvu0nVpGWo0hbKpZVBloFTZF7VmUhqG2WUfjMFtOA&sig=AOD64_1OojaCfkkeQsPwVG-Hs3RQEvcEDg&q&nis=4&adurl&ved=2ahUKEwjU8Pq02LKCAxXlLLkGHZUHA_gQ0Qx6BAgKEAE">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2Vsyn5zQLCMkdMRJfKfLob_TDmrq7SytC0g&usqp=CAU" height="93" width="93" alt="gato4">
+                    </a>
+                </section>
+
+            </aside>
+
+            <footer style="clear:both;">
+                <p>
+                    <a href="#">Home</a>
+                    <a href="#">Seguros </a>
+                    <a href="#">Videos</a>
+                    <a href="#">Mapa</a>
+                    <a href="#">Informações</a>
+
+                </p>
+                <p>2025 <a href="#">Segure sua vida e se assegure</a> - Todos os direitos reservados </p>
+
+            </footer>
+
+        </div>
+
+    </body>
+</html>
