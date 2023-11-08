@@ -2,16 +2,55 @@
     <head>
         <title>Tokio Marine</title>
         <meta charset="UTF-8"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
+            nav.navbar-transparente{
+    padding: 13px 0px;
+    background:  rgba(0,0,0,0.6);
+    
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color:white;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color:rgb(142, 99, 233);
+    
+}
+.capa{
+    text-align: center;
+}
+
+.btn-custom{
+    color:white;
+    border-radius: 500px;
+    -webkit-border-radius:500px;
+    -moz-border-radius:500px;
+    text-transform: uppercase;
+    transition: 0.4s, color 04s;
+    padding:10px 15px;
+}
             span{
                 color:#a9daa2;
             }
             .fundo_cab {background-color:rgb(29, 133, 51);
-                        padding:130px;
-                        height:20px;}
+                        padding:150px 90px;
+                        height:300px;
+                    }
            
              .texto_logo{color:rgb(233, 233, 231);
-            font-size: 39px;
+            font-size: 80px;
          }
            
             #container{
@@ -178,7 +217,51 @@
         </style>
     </head>
     <body>
-        <p class="text-md-center"></p>
+        <div class="float-md-end"></div><br>
+        
+
+        <header><!-- inicio Cabecalho -->
+            <nav class="navbar navbar-expand-sm navbar-light fixed-top navbar-transparente">
+              <div class="container">
+                
+                <a href="#" class="navbar-brand">
+                <div class="row rotacionar"></div>
+                  <img src="" width="142">
+                </a>
+      
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+      
+                <div class="collapse navbar-collapse" id="nav-principal">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a href="" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="" class="nav-link">Seguros</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="" class="nav-link">Cotação</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="" class="nav-link">Planos</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="" class="btn btn-outline-light ml-4">Entrar</a>
+                    </li>
+                  </ul>
+                </div>
+      
+              </div>
+            </nav>
+          </header>
+    
+          <div class="float-sm-end"></div><br>
+          
+          <div class="float-lg-end"></div><br>
+          <div class="float-xl-end"></div><br>
+          <div class="float-xxl-end"></div><br>
         <div class="fundo_cab" id=container>
             
             <header>
@@ -188,16 +271,7 @@
                    
                 </div>
                 
-                    <nav>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Seguros</a></li>
-                            <li><a href="#">Cotações</a></li>
-                            <li><a href="#">PLanos </a></li>
-                            <li><a href="#">Atendentes</a></li>
-                            <li><a href="#">Contato</a></li>
-                        </ul>
-                    </nav>
+                    
                 
             </header>
         </div>
@@ -211,7 +285,7 @@
                 <section id="postgem">
                     <article id="video">
                         <h3>O que é seguro? </h3>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/2iG9Oinye50?si=XkPFxiMbTCFjh42j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="310" height="180" src="https://www.youtube.com/embed/2iG9Oinye50?si=XkPFxiMbTCFjh42j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         
                     </article>
 
@@ -257,7 +331,7 @@
            
             <aside>
                 <section id="depoimento">
-                   <center> <img src="https://media.licdn.com/dms/image/D4D10AQHEFe7c2Z42QQ/image-shrink_800/0/1697568916192?e=1699948800&v=beta&t=SQQdXgjW241L4Cb5kBz7QQjAw5fl-tjAngXzCKOm5kw" width="" height="400"> </center>
+                   <center> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDiVaaU5AK01KaYQaw7FgAH7OMXYLtPc4PplHJJCRYIXtP-KUbusD4X3iPH6uPsppGIaQ&usqp=CAU" width="" height="400"> </center>
                     <center><p><i>"Eu e minha família amamos estar seguros com a Tokio Marine, confiamos de olhos fechados." Adelina</i></p></center>
                 </section>
 
